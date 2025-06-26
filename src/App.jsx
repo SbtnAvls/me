@@ -2,11 +2,11 @@ import { useRef } from 'react'
 import './App.css'
 
 const sections = [
-  'inicio',
-  'experiencia',
-  'proyectos',
-  'inspiracion',
-  'contacto',
+  { name: 'inicio', icon: '🏠' },
+  { name: 'experiencia', icon: '💼' },
+  { name: 'proyectos', icon: '💻' },
+  { name: 'inspiracion', icon: '💡' },
+  { name: 'contacto', icon: '✉️' },
 ]
 
 function App() {
@@ -19,20 +19,21 @@ function App() {
   return (
     <div className="app">
       <nav className="sidebar">
-        {sections.map((item, idx) => (
-          <button key={item} onClick={() => handleClick(idx)}>
-            {item}
+        {sections.map(({ name, icon }, idx) => (
+          <button key={name} onClick={() => handleClick(idx)}>
+            <span className="icon">{icon}</span>
+            <span className="label">{name}</span>
           </button>
         ))}
       </nav>
       <div className="pages">
-        {sections.map((item, idx) => (
+        {sections.map(({ name }, idx) => (
           <section
-            key={item}
+            key={name}
             ref={(el) => {
               refs.current[idx] = el
             }}
-            id={item}
+            id={name}
             className="page"
           ></section>
         ))}
