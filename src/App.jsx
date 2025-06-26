@@ -26,6 +26,20 @@ function App() {
             <span className="label">{name}</span>
           </button>
         ))}
+        <div className="sidebar-bottom">
+          <a
+            href="https://wa.me/573023350784"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="icon">💬</span>
+            <span className="label">WhatsApp</span>
+          </a>
+          <a href="mailto:juansebastian3g@gmail.com">
+            <span className="icon">📧</span>
+            <span className="label">Correo</span>
+          </a>
+        </div>
       </nav>
       <div className="pages">
         {sections.map(({ name }, idx) => (
