@@ -65,13 +65,17 @@
 }
 
 .code-text {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  font-family: monospace;
+}
+
+.code-line {
   overflow: hidden;
   white-space: pre;
   border-right: 2px solid #c7c7c7;
   width: 0;
-  animation: typing 4s steps(50) 2.5s infinite forwards,
-             blink 0.8s step-end infinite;
+  display: block;
 }
 
 @keyframes typing {
