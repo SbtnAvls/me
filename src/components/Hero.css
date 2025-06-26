@@ -1,0 +1,111 @@
+.hero-banner {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+}
+
+.hero-left,
+.hero-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-left h1 {
+  max-width: 90%;
+  text-align: center;
+}
+
+.hero-right {
+  position: relative;
+  overflow: hidden;
+}
+
+.tools,
+.code-window,
+.phone {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.tools {
+  font-size: 5rem;
+  animation: tools-anim 12s linear infinite;
+}
+
+@keyframes tools-anim {
+  0% { opacity: 1; transform: rotate(0deg); }
+  5% { transform: rotate(-10deg); }
+  10% { transform: rotate(10deg); }
+  15% { transform: rotate(-5deg); }
+  20% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.code-window {
+  background: #1e1e1e;
+  color: #c7c7c7;
+  padding: 1rem;
+  border-radius: 6px;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  animation: code-anim 12s linear infinite;
+}
+
+@keyframes code-anim {
+  0%,20% { opacity: 0; }
+  25%,55% { opacity: 1; }
+  60%,100% { opacity: 0; }
+}
+
+.code-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: pre;
+  border-right: 2px solid #c7c7c7;
+  width: 0;
+  animation: typing 4s steps(40) 2.5s infinite forwards,
+             blink 0.8s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: #c7c7c7; }
+}
+
+.phone {
+  width: 160px;
+  height: 320px;
+  border: 8px solid #333;
+  border-radius: 20px;
+  background: #000;
+  box-sizing: border-box;
+  animation: phone-anim 12s linear infinite;
+}
+
+.phone-screen {
+  flex: 1;
+  background: #fff;
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+@keyframes phone-anim {
+  0%,60% { opacity: 0; transform: translateX(-50%); }
+  65%,100% { opacity: 1; transform: translateX(0); }
+}
