@@ -60,16 +60,25 @@
   opacity: 1;
 }
 
+
 .pages {
   margin-left: 60px;
+  width: calc(100% - 60px);
   height: 100vh;
   overflow-y: auto;
   scroll-snap-type: y mandatory;
-  transition: margin-left 0.3s;
+  transition: margin-left 0.3s, width 0.3s;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.pages::-webkit-scrollbar {
+  display: none;
 }
 
 .sidebar:hover ~ .pages {
   margin-left: 150px;
+  width: calc(100% - 150px);
 }
 
 .page {

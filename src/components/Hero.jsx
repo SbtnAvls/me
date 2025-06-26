@@ -6,7 +6,7 @@ function Hero() {
   return (
     <div className="hero-banner">
       <div className="hero-left">
-        <h1>Hi! I'm Sebastian, React-ReactNative developer</h1>
+        <h1>Hi! I'm Sebastian, React / React-Native developer</h1>
       </div>
       <div className="hero-right">
         <div className="tools" aria-hidden="true">🛠️</div>
