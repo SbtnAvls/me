@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import './App.css'
+import Hero from './components/Hero.jsx'
 
 const sections = [
   { name: 'inicio', icon: '🏠' },
@@ -35,7 +36,9 @@ function App() {
             }}
             id={name}
             className="page"
-          ></section>
+          >
+            {idx === 0 && <Hero />}
+          </section>
         ))}
       </div>
     </div>
