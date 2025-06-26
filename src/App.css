@@ -29,7 +29,8 @@
   align-items: flex-start;
 }
 
-.sidebar button {
+.sidebar button,
+.sidebar a {
   background: transparent;
   border: none;
   color: inherit;
@@ -39,25 +40,36 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  text-decoration: none;
 }
 
-.sidebar button .icon {
+.sidebar button .icon,
+.sidebar a .icon {
   width: 1.2rem;
   display: flex;
   justify-content: center;
   margin-right: 0.5rem;
 }
 
-.sidebar button .label {
+.sidebar button .label,
+.sidebar a .label {
   overflow: hidden;
   max-width: 0;
   opacity: 0;
   transition: max-width 0.3s, opacity 0.3s;
 }
 
-.sidebar:hover button .label {
+.sidebar:hover button .label,
+.sidebar:hover a .label {
   max-width: 100px;
   opacity: 1;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 
