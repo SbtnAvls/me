@@ -1,34 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useRef } from 'react'
 import './App.css'
 
+const sections = [
+  'inicio',
+  'experiencia',
+  'proyectos',
+  'inspiracion',
+  'contacto',
+]
+
 function App() {
-  const [count, setCount] = useState(0)
+  const refs = useRef([])
+
+  const handleClick = (index) => {
+    refs.current[index]?.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="app">
+      <nav className="sidebar">
+        {sections.map((item, idx) => (
+          <button key={item} onClick={() => handleClick(idx)}>
+            {item}
+          </button>
+        ))}
+      </nav>
+      <div className="pages">
+        {sections.map((item, idx) => (
+          <section
+            key={item}
+            ref={(el) => {
+              refs.current[idx] = el
+            }}
+            id={item}
+            className="page"
+          ></section>
+        ))}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
