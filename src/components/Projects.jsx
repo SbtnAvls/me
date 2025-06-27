@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import CodeDrift from './codeDrift/CodeDrift'
 import './Projects.css'
 
 const categories = ['Todos', 'FullStack', 'Frontend', 'Backend']
@@ -47,6 +48,7 @@ function Projects() {
   return (
     <div className="projects-section">
       <div className="projects-card">
+        <CodeDrift />
         <div className="projects-nav-wrapper">
           <nav className="projects-nav">
             {categories.map((cat) => (

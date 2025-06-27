@@ -1,0 +1,27 @@
+.code-drift-wrapper {
+  position: absolute;
+  inset: 0;               /* cubre todo el hero */
+  overflow: hidden;
+  z-index: 1;             /* por detrás del contenido interactivo */
+  pointer-events: none;   /* no bloquea clics */
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #6b6b6b;         /* gris sutil; súbelo para más contraste */
+  opacity: 0.25;          /* transparencia global */
+}
+
+/* Cada línea de código que cruza */
+.code-drift-line {
+  position: absolute;
+  white-space: nowrap;
+  animation-name: drift-right;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Animación: de -100vw → 100vw */
+@keyframes drift-right {
+  0%   { transform: translateX(-110vw); }
+  100% { transform: translateX(110vw); }
+}
