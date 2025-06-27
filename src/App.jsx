@@ -5,7 +5,7 @@ import {
   Folder,
   Lightbulb,
   Mail,
-} from 'lucide-react'
+} from './icons.jsx'
 import './App.css'
 import Hero from './components/Hero.jsx'
 
