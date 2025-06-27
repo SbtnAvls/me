@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import './Hero.css'
 
 const codeExample = [
@@ -7,10 +8,42 @@ const codeExample = [
 ]
 
 function Hero() {
+  const title = "Hi! I'm Sebastian, React / React-Native developer"
+  const [visibleText, setVisibleText] = useState('')
+  const [typed, setTyped] = useState(false)
+
+  useEffect(() => {
+    let i = 0
+    const interval = setInterval(() => {
+      i += 1
+      setVisibleText(title.slice(0, i))
+      if (i >= title.length) {
+        clearInterval(interval)
+        setTyped(true)
+      }
+    }, 50)
+    return () => clearInterval(interval)
+  }, [])
+
+  useEffect(() => {
+    if (!typed) return
+    const handleScroll = () => {
+      const scrolled = Math.min(window.scrollY, window.innerHeight)
+      const progress = scrolled / window.innerHeight
+      const len = Math.floor(title.length * (1 - progress))
+      setVisibleText(title.slice(0, len))
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [typed])
+
   return (
     <div className="hero-banner">
       <div className="hero-left">
-        <h1>Hi! I'm Sebastian, React / React-Native developer</h1>
+        <h1 className="hero-title">
+          {visibleText}
+          <span className="cursor" aria-hidden="true">|</span>
+        </h1>
       </div>
       <div className="hero-right">
         <div className="tools" aria-hidden="true">🛠️</div>
@@ -21,7 +54,8 @@ function Hero() {
                 key={idx}
                 className="code-line"
                 style={{
-                  animation: `typing 2s steps(${line.length}) ${idx * 2}s forwards` +
+                  animation:
+                    `typing 2s steps(${line.length}) ${idx * 2}s forwards` +
                     (idx === codeExample.length - 1
                       ? `, blink 0.8s step-end infinite ${idx * 2}s`
                       : ''),
