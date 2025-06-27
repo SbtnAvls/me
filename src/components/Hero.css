@@ -2,7 +2,6 @@
   display: flex;
   height: 100vh;
   width: 100%;
-  scroll-snap-align: start;
 }
 
 .hero-left,
@@ -16,6 +15,18 @@
 .hero-left h1 {
   max-width: 90%;
   text-align: center;
+}
+
+.hero-title {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.cursor {
+  display: inline-block;
+  width: 1ch;
+  animation: blink 1s step-end infinite;
 }
 
 .hero-right {
