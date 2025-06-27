@@ -230,13 +230,11 @@
 @media (max-width: 768px) {
   .hero-banner {
     display: flex;
-    height: 100vh;
+    flex-direction: column;
     width: 100%;
     position: relative;
     overflow: hidden;
-  
-    /* 🆕 centra a hero-left y hero-right en el eje vertical */
-    align-items: center;             /* ← la clave */
+    align-items: center;
   }
 
   .hero-left,
@@ -244,6 +242,13 @@
   .resume-download {
     position: relative;
     z-index: 2;            /* cualquier valor >0 sirve */
+  }
+
+  .hero-left,
+  .hero-right {
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: 100%;
   }
 
   .hero-right {
