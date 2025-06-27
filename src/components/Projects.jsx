@@ -63,6 +63,7 @@ function Projects() {
             ))}
           </nav>
         </div>
+        
         <ul className="projects-list">
           {filtered.map((proj) => (
             <li key={proj.title} className="project-item">
