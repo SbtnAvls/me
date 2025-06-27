@@ -9,7 +9,7 @@ import {
   SiTypescript,
 } from 'react-icons/si'
 import { TbBrandReactNative } from 'react-icons/tb'
-import { EyesAnimation } from "./eyes/eyes"
+import EyesAnimation from './eyes/eyes'
 import './Hero.css'
 
 const codeExample = [
