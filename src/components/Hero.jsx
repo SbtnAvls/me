@@ -10,7 +10,6 @@ const codeExample = [
 function Hero() {
   const title = "Hi! I'm Sebastian, React / React-Native developer"
   const [visibleText, setVisibleText] = useState('')
-  const [typed, setTyped] = useState(false)
 
   useEffect(() => {
     let i = 0
@@ -19,23 +18,10 @@ function Hero() {
       setVisibleText(title.slice(0, i))
       if (i >= title.length) {
         clearInterval(interval)
-        setTyped(true)
       }
     }, 50)
     return () => clearInterval(interval)
   }, [])
-
-  useEffect(() => {
-    if (!typed) return
-    const handleScroll = () => {
-      const scrolled = Math.min(window.scrollY, window.innerHeight)
-      const progress = scrolled / window.innerHeight
-      const len = Math.floor(title.length * (1 - progress))
-      setVisibleText(title.slice(0, len))
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [typed])
 
   return (
     <div className="hero-banner">
