@@ -25,7 +25,7 @@ function Contact() {
           <FaLinkedin size={24} />
         </a>
         <a
-          href="https://wa.me/573000000000"
+          href="https://wa.me/573023350784"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="WhatsApp"
@@ -33,7 +33,7 @@ function Contact() {
           <FaWhatsapp size={24} />
         </a>
         <a
-          href="https://www.instagram.com"
+          href="https://www.instagram.com/sopadepan_?igsh=MTQyNHBra2plNzlodQ%3D%3D&utm_source=qr"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
