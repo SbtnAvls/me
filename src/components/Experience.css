@@ -18,6 +18,32 @@
   opacity: 0;
 }
 
+.postics-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.postic {
+  background: #fef3a0;
+  color: #333;
+  padding: 1rem;
+  width: 220px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transform-origin: center;
+}
+
+.postic h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.postic p {
+  margin: 0.25rem 0;
+}
+
 .experience-title {
   margin-top: 0;
   margin-bottom: 1rem;
