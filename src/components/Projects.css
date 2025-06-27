@@ -24,6 +24,12 @@
   align-items: center;
   animation: fadeInUp 0.8s ease forwards;
   opacity: 0;
+  position: relative;
+}
+
+.projects-card > * {
+  position: relative;
+  z-index: 2;
 }
 
 .projects-nav-wrapper {
