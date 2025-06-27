@@ -9,6 +9,7 @@ import {
   SiTypescript,
 } from 'react-icons/si'
 import { TbBrandReactNative } from 'react-icons/tb'
+import { EyesAnimation } from "./eyes/eyes"
 import './Hero.css'
 
 const codeExample = [
@@ -40,6 +41,7 @@ function Hero() {
   return (
     <div className="hero-banner">
       <div className="hero-left">
+        <EyesAnimation />
         <h1 className="hero-title" ref={titleRef}>
           {title}
         </h1>
