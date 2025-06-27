@@ -185,7 +185,8 @@
   .sidebar-menu {
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .sidebar button .label,
@@ -193,6 +194,20 @@
   .sidebar:hover button .label,
   .sidebar:hover a .label {
     display: none;
+  }
+
+  .sidebar button,
+  .sidebar a {
+    width: auto;
+    padding: 0.5rem;
+    justify-content: center;
+  }
+
+  .sidebar button .icon,
+  .sidebar a .icon {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0;
   }
 
   .sidebar-bottom {
