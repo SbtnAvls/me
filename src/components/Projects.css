@@ -26,14 +26,21 @@
   opacity: 0;
 }
 
+.projects-nav-wrapper {
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .projects-nav {
   display: flex;
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  border-radius: 999px;
   overflow: hidden;
-  height: 30%;
+  width: 80%;
 }
 
 .projects-nav button {
