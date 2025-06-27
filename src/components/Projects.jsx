@@ -39,17 +39,19 @@ function Projects() {
   return (
     <div className="projects-section">
       <div className="projects-card">
-        <nav className="projects-nav">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              className={filter === cat ? 'active' : ''}
-              onClick={() => setFilter(cat)}
-            >
-              {cat}
-            </button>
-          ))}
-        </nav>
+        <div className="projects-nav-wrapper">
+          <nav className="projects-nav">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                className={filter === cat ? 'active' : ''}
+                onClick={() => setFilter(cat)}
+              >
+                {cat}
+              </button>
+            ))}
+          </nav>
+        </div>
         <ul className="projects-list">
           {filtered.map((proj) => (
             <li key={proj.title} className="project-item">
