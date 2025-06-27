@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Github, Linkedin } from 'lucide-react'
 import './Hero.css'
 
 const codeExample = [
@@ -33,6 +34,24 @@ function Hero() {
         <h1 className="hero-title" ref={titleRef}>
           {title}
         </h1>
+        <div className="hero-links">
+          <a
+            className="hero-link"
+            href="https://github.com/SbtnAvls"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Github size={20} /> GitHub
+          </a>
+          <a
+            className="hero-link"
+            href="https://www.linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Linkedin size={20} /> LinkedIn
+          </a>
+        </div>
       </div>
       <div className="hero-right">
         <div className="tools" aria-hidden="true">🛠️</div>
