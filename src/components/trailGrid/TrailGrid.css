@@ -1,0 +1,15 @@
+.trail-grid {
+  display: grid;
+  gap: 1px;                          /* línea divisoria entre celdas */
+  background: #232323;               /* color de las “rayas” del grid */
+}
+
+.trail-cell {
+  background: #0d0d0d;               /* color base */
+  transition: background 0.8s ease;  /* controla la duración del “desvanecido” */
+}
+
+.trail-cell:hover {
+  background: #7282ff;               /* color al iluminarse */
+  transition: background 0.05s ease; /* se enciende casi al instante */
+}

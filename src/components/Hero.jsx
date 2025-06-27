@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Github, Linkedin } from 'lucide-react'
+import TrailGrid from "./trailGrid/TrailGrid"
 import {
   SiReact,
   SiAngular,
@@ -40,6 +41,8 @@ function Hero() {
 
   return (
     <div className="hero-banner">
+      <TrailGrid rows={14} cols={42} size={40} />
+
       <div className="hero-left">
         {/* <EyesAnimation /> */}
         <h1 className="hero-title" ref={titleRef}>
