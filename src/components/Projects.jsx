@@ -36,9 +36,9 @@ const projects = [
     description:
       'Bot de Telegram que habilita la comunicación por voz con modelos como Gemma 3 ejecutados localmente.',
     techs: ['Python'],
-    image: '/vite.svg',
     category: 'Backend',
     code: botCode,
+    replaceImageWithButton: true,
   },
 ]
 
@@ -86,7 +86,7 @@ function Projects() {
                     </span>
                   ))}
                 </div>
-                {proj.code && (
+                {proj.code && !proj.replaceImageWithButton && (
                   <button
                     className="code-button"
                     onClick={() => setCodeOpen(proj.code)}
@@ -96,7 +96,16 @@ function Projects() {
                 )}
               </div>
               <div className="project-image">
-                <img src={proj.image} alt={proj.title} />
+                {proj.replaceImageWithButton ? (
+                  <button
+                    className="code-button"
+                    onClick={() => setCodeOpen(proj.code)}
+                  >
+                    Ver Código
+                  </button>
+                ) : (
+                  <img src={proj.image} alt={proj.title} />
+                )}
               </div>
             </li>
           ))}
