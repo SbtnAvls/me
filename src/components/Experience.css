@@ -24,47 +24,30 @@
   margin-bottom: 1rem;
   font-size: 2.5rem;
   text-align: center;
-  position: relative;
-  overflow: hidden;
 }
 
-.experience-title::before,
-.experience-title::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -150%;
-  width: 150%;
-  height: 100%;
-  pointer-events: none;
+.experience-title-text {
+  display: inline-block;
   background: linear-gradient(
     60deg,
-    rgba(0, 0, 0, 0) 40%,
-    rgba(0, 0, 0, 0.5) 50%,
-    rgba(0, 0, 0, 0) 60%
+    #fff 45%,
+    rgba(0, 0, 0, 0.6) 50%,
+    #fff 55%
   );
-  transform: skewX(-30deg);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 100%;
+  animation: sweep-shadow 6s linear infinite;
 }
 
-.experience-title::before {
-  animation: sweep-right 3s infinite;
-}
-
-.experience-title::after {
-  animation: sweep-left 3s infinite;
-  animation-delay: 1s;
-}
-
-@keyframes sweep-right {
-  0% { left: -150%; opacity: 1; }
-  33% { left: 100%; opacity: 1; }
-  34%, 100% { left: 100%; opacity: 0; }
-}
-
-@keyframes sweep-left {
-  0% { left: 100%; opacity: 1; }
-  33% { left: -150%; opacity: 1; }
-  34%, 100% { left: -150%; opacity: 0; }
+@keyframes sweep-shadow {
+  from {
+    background-position: 0% 0;
+  }
+  to {
+    background-position: 200% 0;
+  }
 }
 
 @keyframes fadeInUp {
