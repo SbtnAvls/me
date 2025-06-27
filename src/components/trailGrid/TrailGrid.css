@@ -1,11 +1,17 @@
+
 .trail-grid {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   display: grid;
   gap: 1px;                          /* línea divisoria entre celdas */
   background: #232323;               /* color de las “rayas” del grid */
+  z-index: 0;
 }
 
 .trail-cell {
-  background: #0d0d0d;               /* color base */
+  background: #242424;               /* color base ajustado al color de la card */
   transition: background 0.8s ease;  /* controla la duración del “desvanecido” */
 }
 
