@@ -20,12 +20,14 @@ function App() {
   return (
     <div className="app">
       <nav className="sidebar">
-        {sections.map(({ name, icon }, idx) => (
-          <button key={name} onClick={() => handleClick(idx)}>
-            <span className="icon">{icon}</span>
-            <span className="label">{name}</span>
-          </button>
-        ))}
+        <div className="sidebar-menu">
+          {sections.map(({ name, icon }, idx) => (
+            <button key={name} onClick={() => handleClick(idx)}>
+              <span className="icon">{icon}</span>
+              <span className="label">{name}</span>
+            </button>
+          ))}
+        </div>
         <div className="sidebar-bottom">
           <a
             href="https://wa.me/573023350784"
