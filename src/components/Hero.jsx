@@ -100,6 +100,11 @@ function Hero() {
           </div>
         </div>
       </div>
+      <div className="resume-download">
+        <a href="/cv.pdf" className="resume-button" download>
+          Descargar hoja de vida
+        </a>
+      </div>
     </div>
   )
 }
