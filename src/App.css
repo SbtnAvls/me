@@ -57,6 +57,11 @@
   box-sizing: border-box;
 }
 
+.sidebar button.active {
+  background: #555;
+  font-weight: bold;
+}
+
 .sidebar button .icon,
 .sidebar a .icon {
   width: 1.2rem;
