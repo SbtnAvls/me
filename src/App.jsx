@@ -59,7 +59,7 @@ function App() {
           <span className="icon">
             <img src="/profile.jpg" alt="Perfil" className="profile-photo" />
           </span>
-          <span className="label">Juan Sebastian Aviles</span>
+          <span className="label">Perfil</span>
         </button>
         <div className="sidebar-menu">
           {sections.map(({ name, label, icon: Icon }, idx) => (
