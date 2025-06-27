@@ -26,10 +26,16 @@
   text-align: center;
 }
 
+@property --angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 60deg;
+}
+
 .experience-title-text {
   display: inline-block;
   background: linear-gradient(
-    60deg,
+    var(--angle),
     #fff 45%,
     rgba(0, 0, 0, 0.6) 50%,
     #fff 55%
@@ -38,15 +44,25 @@
   background-clip: text;
   color: transparent;
   background-size: 200% 100%;
-  animation: sweep-shadow 6s linear infinite;
+  animation: sweep-shadow 5s linear infinite;
 }
 
 @keyframes sweep-shadow {
-  from {
+  0% {
+    --angle: 60deg;
     background-position: 0% 0;
   }
-  to {
+  50% {
+    --angle: 60deg;
     background-position: 200% 0;
+  }
+  50.0001% {
+    --angle: -60deg;
+    background-position: 200% 0;
+  }
+  100% {
+    --angle: -60deg;
+    background-position: 0% 0;
   }
 }
 
