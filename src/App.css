@@ -95,6 +95,11 @@
   align-items: center;
 }
 
+.sidebar-bottom .contact-link {
+  width: auto;
+  justify-content: center;
+}
+
 
 .pages {
   padding-left: 14%;
