@@ -6,6 +6,15 @@
   overflow: visible;
 }
 
+.repo-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 4;
+  pointer-events: auto;
+  color: inherit;
+}
+
 .hero-left {
   align-self: center;
 }

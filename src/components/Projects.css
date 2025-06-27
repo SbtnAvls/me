@@ -1,6 +1,6 @@
 .projects-section {
   width: 100%;
-  height: 130vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,15 +13,17 @@
 }
 
 .projects-card {
-  position: relative;     /* ya lo tienes ✅  */
-  overflow: hidden;       /* 👈 evita que el rain desborde */
-  /* …resto de reglas… */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 100%;
 }
 
 .projects-card > * {
   position: relative;
-  width: 50vw;
-  height: 100vh;
+  width: 100%;
   z-index: 2;
 }
 
@@ -31,7 +33,6 @@
 }
 
 .projects-nav-wrapper {
-  height: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,6 +40,7 @@
   position: sticky;
   top: 0;
   background: #222;
+  padding: 1rem 0;
 }
 
 .projects-nav {
@@ -76,8 +78,8 @@
   display: flex;
   flex-direction: column;
   gap: calc(1rem + 2%);
-  height: 80%;
-  overflow-y: scroll;
+  flex: 1;
+  overflow-y: auto;
 }
 
 .project-item h3 {
