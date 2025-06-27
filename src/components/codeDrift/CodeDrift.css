@@ -8,7 +8,8 @@
   font-size: 0.75rem;
   line-height: 1rem;
   color: #6b6b6b;         /* gris sutil; súbelo para más contraste */
-  opacity: 0.25;          /* transparencia global */
+  opacity: 0.65;          /* transparencia global */
+  z-index: 1;
 }
 
 /* Cada línea de código que cruza */
@@ -18,10 +19,12 @@
   animation-name: drift-right;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  color: #184;
+  z-index: 1;
 }
 
 /* Animación: de -100vw → 100vw */
 @keyframes drift-right {
-  0%   { transform: translateX(-110vw); }
-  100% { transform: translateX(110vw); }
+  0%   { transform: translateX(-110vw); z-index: 1; }
+  100% { transform: translateX(110vw); z-index: 1; }
 }

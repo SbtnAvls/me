@@ -1,14 +1,8 @@
 import { useMemo } from 'react';
 import './CodeDrift.css';
 
-interface CodeDriftProps {
-  /** Nº de “hileras” de texto que cruzan la pantalla */
-  rows?: number;
-  /** Tiempo (s) que tarda cada hilera en cruzar */
-  baseDuration?: number;
-}
 
-export default function CodeDrift({ rows = 14, baseDuration = 20 }: CodeDriftProps) {
+export default function CodeDrift({ rows = 14, baseDuration = 20 }) {
   // Generamos un array con código aleatorio solo la primera vez
   const snippets = useMemo(() => {
     const samples = [

@@ -47,8 +47,9 @@ function Projects() {
 
   return (
     <div className="projects-section">
+      <CodeDrift />
       <div className="projects-card">
-        <CodeDrift />
+        
         <div className="projects-nav-wrapper">
           <nav className="projects-nav">
             {categories.map((cat) => (
