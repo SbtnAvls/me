@@ -9,6 +9,7 @@ import {
 import './App.css'
 import Hero from './components/Hero.jsx'
 import Experience from './components/Experience.jsx'
+import Projects from './components/Projects.jsx'
 
 const sections = [
   { name: 'inicio', label: 'Inicio', icon: House },
@@ -93,6 +94,7 @@ function App() {
           >
             {idx === 0 && <Hero />}
             {idx === 1 && <Experience />}
+            {idx === 2 && <Projects />}
           </section>
         ))}
       </div>
