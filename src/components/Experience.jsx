@@ -1,4 +1,5 @@
-import { useMemo } from 'react'
+import { Marquee } from '../registry/magicui/marquee'
+import { cn } from '../lib/utils'
 import './Experience.css'
 
 const notes = [
@@ -52,9 +53,8 @@ const notes = [
 ]
 
 function Experience() {
-  const rotations = useMemo(() =>
-    notes.map(() => Math.random() * 30 - 15),
-  [])
+  const firstRow = notes.slice(0, Math.ceil(notes.length / 2))
+  const secondRow = notes.slice(Math.ceil(notes.length / 2))
 
   return (
     <div className="experience-section">
@@ -62,19 +62,31 @@ function Experience() {
         <h2 className="experience-title">
           <span className="experience-title-text">Experiencia</span>
         </h2>
-        <div className="postics-container">
-          {notes.map((note, idx) => (
-            <div
-              key={note.title}
-              className="postic"
-              style={{ transform: `rotate(${rotations[idx]}deg)` }}
-            >
-              <h3>{note.title}</h3>
-              {note.content.map((line, i) => (
-                <p key={i}>{line}</p>
-              ))}
-            </div>
-          ))}
+        <div className="experience-marquee">
+          <Marquee pauseOnHover className="marquee" repeat={2}>
+            {firstRow.map((note) => (
+              <figure key={note.title} className={cn('experience-card')}>
+                <figcaption>
+                  <h3>{note.title}</h3>
+                </figcaption>
+                {note.content.map((line, i) => (
+                  <p key={i}>{line}</p>
+                ))}
+              </figure>
+            ))}
+          </Marquee>
+          <Marquee pauseOnHover reverse className="marquee" repeat={2}>
+            {secondRow.map((note) => (
+              <figure key={note.title} className={cn('experience-card')}>
+                <figcaption>
+                  <h3>{note.title}</h3>
+                </figcaption>
+                {note.content.map((line, i) => (
+                  <p key={i}>{line}</p>
+                ))}
+              </figure>
+            ))}
+          </Marquee>
         </div>
       </div>
     </div>
