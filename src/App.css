@@ -50,9 +50,8 @@
   flex-direction: column;
   gap: 1rem;
   flex: 1;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  margin-top: 1rem;
 }
 
 .sidebar button,
