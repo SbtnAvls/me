@@ -5,7 +5,7 @@ function Contact() {
   return (
     <div className="contact-section">
       <p className="contact-message">
-        Gracias por visitar mi portafolio. ¡Se agradecen las recomendaciones!
+        Gracias por tu visita. Puedes encontrarme en mis redes sociales. ¡Se agradecen las recomendaciones!
       </p>
       <div className="contact-buttons">
         <a
