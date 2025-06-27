@@ -20,7 +20,10 @@
 .hero-right {
   flex: 0 0 40%;
   max-width: 40%;
+  background-color: #174;
   position: relative;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -39,7 +42,9 @@
 
 .tools,
 .code-window {
-  position: absolute;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
   inset: 0;
   display: flex;
   align-items: center;
