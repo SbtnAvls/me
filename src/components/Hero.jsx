@@ -1,5 +1,14 @@
 import { useEffect, useRef } from 'react'
 import { Github, Linkedin } from 'lucide-react'
+import {
+  SiReact,
+  SiAngular,
+  SiPython,
+  SiFirebase,
+  SiGit,
+  SiTypescript,
+} from 'react-icons/si'
+import { TbBrandReactNative } from 'react-icons/tb'
 import './Hero.css'
 
 const codeExample = [
@@ -51,6 +60,15 @@ function Hero() {
           >
             <Linkedin size={20} /> LinkedIn
           </a>
+        </div>
+        <div className="tech-icons">
+          <SiReact size={24} />
+          <TbBrandReactNative size={24} />
+          <SiAngular size={24} />
+          <SiPython size={24} />
+          <SiFirebase size={24} />
+          <SiGit size={24} />
+          <SiTypescript size={24} />
         </div>
       </div>
       <div className="hero-right">
