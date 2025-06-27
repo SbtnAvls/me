@@ -41,15 +41,21 @@
 
 
 .tools,
+.code-window,
+.phone {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.tools,
 .code-window {
   width: 100%;
-  justify-content: center;
-  align-items: center;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
   height: 320px;
 }
 
@@ -59,12 +65,24 @@
 }
 
 @keyframes tools-anim {
-  0% { opacity: 1; transform: rotate(0deg); }
-  5% { transform: rotate(-10deg); }
-  10% { transform: rotate(10deg); }
-  15% { transform: rotate(-5deg); }
-  20% { opacity: 0; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  5% {
+    transform: translate(-50%, -50%) rotate(-10deg);
+  }
+  10% {
+    transform: translate(-50%, -50%) rotate(10deg);
+  }
+  15% {
+    transform: translate(-50%, -50%) rotate(-5deg);
+  }
+  20%,
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .code-window {
@@ -115,9 +133,6 @@
   border-radius: 20px;
   background: #000;
   box-sizing: border-box;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   animation: phone-anim 12s linear infinite;
 }
 
