@@ -6,13 +6,14 @@
   overflow: visible;
 }
 
+.hero-left {
+  align-self: center;
+}
 .hero-left,
 .hero-right {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  z-index: 1;
+  z-index: 3;              /* texto, iconos, etc. siguen delante */
+  pointer-events: none;    /* el ratón atraviesa estas cajas */
 }
 
 .hero-left {
@@ -173,6 +174,14 @@
   transition: background 0.3s;
 }
 
+.hero-link,
+.resume-button,
+.tech-icons *,
+.phone,
+.code-window {
+  pointer-events: auto;
+}
+
 .hero-link:hover {
   background: #535bf2;
 }
@@ -190,8 +199,8 @@
   display: flex;
   justify-content: center;
   position: absolute;
-  z-index: 1;
-  bottom: -2rem;
+  z-index: 3;
+  bottom: 22rem;
   left: 0;
 }
 
@@ -211,15 +220,21 @@
 
 @media (max-width: 768px) {
   .hero-banner {
-    flex-direction: column;
-    height: auto;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  
+    /* 🆕 centra a hero-left y hero-right en el eje vertical */
+    align-items: center;             /* ← la clave */
   }
 
   .hero-left,
-  .hero-right {
-    flex: none;
-    max-width: 100%;
-    width: 100%;
+  .hero-right,
+  .resume-download {
+    position: relative;
+    z-index: 2;            /* cualquier valor >0 sirve */
   }
 
   .hero-right {

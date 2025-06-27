@@ -2,20 +2,18 @@
 .trail-grid {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
   display: grid;
-  gap: 1px;                          /* línea divisoria entre celdas */
-  background: #232323;               /* color de las “rayas” del grid */
-  z-index: 0;
+  gap: 1px;
+  background: #1a1a1a;
+  z-index: 2;              /* ← un poco por encima del fondo */
 }
 
 .trail-cell {
-  background: #242424;               /* color base ajustado al color de la card */
-  transition: background 0.8s ease;  /* controla la duración del “desvanecido” */
+  background: #242424;                /* oscuro base */
+  transition: background 0.8s ease;   /* desvanecido */
 }
 
 .trail-cell:hover {
-  background: #7282ff;               /* color al iluminarse */
-  transition: background 0.05s ease; /* se enciende casi al instante */
+  background: #7282ff;                /* brillo */
+  transition: background 0.05s ease;  /* encendido casi instantáneo */
 }

@@ -41,7 +41,7 @@ function Hero() {
 
   return (
     <div className="hero-banner">
-      <TrailGrid rows={14} cols={42} />
+      <TrailGrid rows={34} cols={42} />
 
       <div className="hero-left">
         {/* <EyesAnimation /> */}
@@ -102,11 +102,12 @@ function Hero() {
             <p>Hello World</p>
           </div>
         </div>
-      </div>
-      <div className="resume-download">
-        <a href="/cv.pdf" className="resume-button" download>
-          Descargar hoja de vida
-        </a>
+
+        <div className="resume-download">
+          <a href="/cv.pdf" className="resume-button" download>
+            Descargar hoja de vida
+          </a>
+        </div>
       </div>
     </div>
   )
