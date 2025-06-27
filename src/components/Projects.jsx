@@ -8,24 +8,32 @@ const projects = [
     title: 'App Servimax Tenderos',
     description:
       'Aplicación para la venta de productos dirigida a tenderos, disponible tanto en App Store como en Play Store. Desarrollada con React Native, TypeScript, Kotlin, Objective-C y Redux.',
+    techs: ['React Native', 'TypeScript', 'Redux'],
+    image: '/vite.svg',
     category: 'Frontend',
   },
   {
     title: 'App Servimax Vendedoras',
     description:
       'Aplicación con funcionamiento totalmente offline para el equipo de ventas presenciales. Publicada en App Store y Play Store y desarrollada con React Native, TypeScript, Kotlin, Objective-C y Redux.',
+    techs: ['React Native', 'TypeScript', 'Redux'],
+    image: '/vite.svg',
     category: 'Frontend',
   },
   {
     title: 'Servimax Conductores',
     description:
       'Aplicación con funciones offline completas que permite gestionar las entregas y los pagos contra entrega. Disponible en Play Store y App Store. Desarrollada con React Native, TypeScript, Kotlin, Objective-C y Redux.',
+    techs: ['React Native', 'TypeScript', 'Redux'],
+    image: '/vite.svg',
     category: 'Frontend',
   },
   {
     title: 'Chat de audio con IA',
     description:
       'Bot de Telegram que habilita la comunicación por voz con modelos como Gemma 3 ejecutados localmente.',
+    techs: ['Node.js', 'TypeScript', 'Python'],
+    image: '/vite.svg',
     category: 'FullStack',
   },
 ]
@@ -55,8 +63,20 @@ function Projects() {
         <ul className="projects-list">
           {filtered.map((proj) => (
             <li key={proj.title} className="project-item">
-              <h3>{proj.title}</h3>
-              <p>{proj.description}</p>
+              <div className="project-info">
+                <h3>{proj.title}</h3>
+                <p>{proj.description}</p>
+                <div className="project-techs">
+                  {proj.techs.map((t) => (
+                    <span key={t} className="tech">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="project-image">
+                <img src={proj.image} alt={proj.title} />
+              </div>
             </li>
           ))}
         </ul>

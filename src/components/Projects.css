@@ -75,6 +75,49 @@
   margin: 0 0 0.25rem;
 }
 
+.project-item {
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  gap: 1rem;
+}
+
+.project-info {
+  flex: 0 0 68%;
+  max-width: 68%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-image {
+  flex: 0 0 32%;
+  max-width: 32%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.project-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.project-techs .tech {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
 @keyframes fadeInUp {
   from { transform: translateY(20px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
