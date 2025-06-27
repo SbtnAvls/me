@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import CodeDrift from './codeDrift/CodeDrift'
+import CodeModal from './CodeModal'
+import botCode from '../assets/telegram_voice_bot.py?raw'
 import './Projects.css'
 
 const categories = ['Todos', 'Frontend', 'Backend']
@@ -36,12 +38,14 @@ const projects = [
     techs: ['Python'],
     image: '/vite.svg',
     category: 'Backend',
+    code: botCode,
   },
 ]
 
 function Projects() {
   const [filter, setFilter] = useState('Todos')
   const containerRef = useRef(null)
+  const [codeOpen, setCodeOpen] = useState(null)
 
   useEffect(() => {
     containerRef.current?.scrollTo({ top: 0 })
@@ -82,6 +86,14 @@ function Projects() {
                     </span>
                   ))}
                 </div>
+                {proj.code && (
+                  <button
+                    className="code-button"
+                    onClick={() => setCodeOpen(proj.code)}
+                  >
+                    Ver Código
+                  </button>
+                )}
               </div>
               <div className="project-image">
                 <img src={proj.image} alt={proj.title} />
@@ -90,6 +102,7 @@ function Projects() {
           ))}
         </ul>
       </div>
+      <CodeModal open={!!codeOpen} onClose={() => setCodeOpen(null)} code={codeOpen} />
     </div>
   )
 }

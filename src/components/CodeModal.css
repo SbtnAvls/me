@@ -1,0 +1,57 @@
+.code-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.code-modal {
+  background: #1e1e1e;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 80%;
+  max-height: 80%;
+  overflow: auto;
+  font-family: monospace;
+  position: relative;
+}
+
+.modal-code {
+  margin: 0;
+  white-space: pre;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: #333;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+}
+.modal-close:hover {
+  background: #444;
+}
+
+.code-button {
+  margin-top: 0.5rem;
+  background: #646cff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.code-button:hover {
+  background: #535bf2;
+}
