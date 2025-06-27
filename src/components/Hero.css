@@ -258,6 +258,10 @@
   .resume-download {
     position: static;
     bottom: auto;
-    margin-top: 2rem;
+    margin-top: 20%;
+  }
+
+  .hero-left h1 {
+    margin-top: 12%;
   }
 }
