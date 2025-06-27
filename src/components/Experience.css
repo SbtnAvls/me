@@ -22,30 +22,105 @@
   align-items: center;
 }
 
-.postics-container {
+.experience-marquee {
+  position: relative;
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-  max-width: 80%;
+  overflow: hidden;
 }
 
-.postic {
-  background: #e0e0e0;
-  color: #333;
+.experience-marquee::before,
+.experience-marquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 25%;
+  pointer-events: none;
+}
+
+.experience-marquee::before {
+  left: 0;
+  background: linear-gradient(to right, #242424, transparent);
+}
+
+.experience-marquee::after {
+  right: 0;
+  background: linear-gradient(to left, #242424, transparent);
+}
+
+.marquee {
+  --duration: 20s;
+  --gap: 1rem;
+  display: flex;
+  overflow: hidden;
   padding: 1rem;
+  gap: var(--gap);
+}
+
+.marquee.vertical {
+  flex-direction: column;
+}
+
+.marquee.paused:hover .marquee-row {
+  animation-play-state: paused;
+}
+
+.marquee-row {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-around;
+  gap: var(--gap);
+  animation: marquee var(--duration) linear infinite;
+}
+
+.marquee-row.reverse {
+  animation-direction: reverse;
+}
+
+.marquee-row.vertical {
+  flex-direction: column;
+  animation-name: marquee-vertical;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.experience-card {
+  position: relative;
   width: 260px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transform-origin: center;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
-.postic h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
+.experience-card h3 {
+  margin: 0 0 0.5rem;
 }
 
-.postic p {
+.experience-card p {
   margin: 0.25rem 0;
 }
 
