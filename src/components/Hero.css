@@ -21,8 +21,8 @@
 .hero-left,
 .hero-right {
   position: relative;
-  z-index: 3;              /* texto, iconos, etc. siguen delante */
-  pointer-events: none;    /* el ratón atraviesa estas cajas */
+  z-index: 3;
+  pointer-events: none;
 }
 
 .hero-left {

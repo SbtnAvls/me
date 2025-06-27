@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { Github, Linkedin, Terminal } from 'lucide-react'
+import { Github, Linkedin } from 'lucide-react'
 import TrailGrid from "./trailGrid/TrailGrid"
 import {
   SiReact,
@@ -42,14 +42,6 @@ function Hero() {
   return (
     <div className="hero-banner">
       <TrailGrid rows={34} cols={42} />
-      <a
-        href="https://github.com/SbtnAvls/me"
-        className="repo-icon"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Terminal size={24} />
-      </a>
 
       <div className="hero-left">
         {/* <EyesAnimation /> */}

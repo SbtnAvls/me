@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import CodeDrift from './codeDrift/CodeDrift'
 import './Projects.css'
 
-const categories = ['Todos', 'FullStack', 'Frontend', 'Backend']
+const categories = ['Todos', 'Frontend', 'Backend']
 
 const projects = [
   {
@@ -35,7 +35,7 @@ const projects = [
       'Bot de Telegram que habilita la comunicación por voz con modelos como Gemma 3 ejecutados localmente.',
     techs: ['Python'],
     image: '/vite.svg',
-    category: 'FullStack',
+    category: 'Backend',
   },
 ]
 
@@ -68,7 +68,7 @@ function Projects() {
             ))}
           </nav>
         </div>
-        
+
         <ul className="projects-list">
           {filtered.map((proj) => (
             <li key={proj.title} className="project-item">

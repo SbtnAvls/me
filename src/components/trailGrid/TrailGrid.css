@@ -5,15 +5,15 @@
   display: grid;
   gap: 1px;
   background: #1a1a1a;
-  z-index: 2;              /* ← un poco por encima del fondo */
+  z-index: 2;
 }
 
 .trail-cell {
-  background: #242424;                /* oscuro base */
-  transition: background 0.8s ease;   /* desvanecido */
+  background: #242424;
+  transition: background 0.8s ease;
 }
 
 .trail-cell:hover {
-  background: #7282ff;                /* brillo */
-  transition: background 0.05s ease;  /* encendido casi instantáneo */
+  background: #7282ff;
+  transition: background 0.05s ease;
 }
