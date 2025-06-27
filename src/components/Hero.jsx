@@ -41,7 +41,7 @@ function Hero() {
 
   return (
     <div className="hero-banner">
-      <TrailGrid rows={14} cols={42} size={40} />
+      <TrailGrid rows={14} cols={42} />
 
       <div className="hero-left">
         {/* <EyesAnimation /> */}
