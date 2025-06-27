@@ -10,6 +10,7 @@
   box-sizing: border-box;
   overflow-y: auto;
   gap: 1rem;
+  position: relative; /* para posicionar CodeDrift */
 }
 
 .projects-card {
