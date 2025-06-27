@@ -12,7 +12,7 @@ import {
 import { TbBrandReactNative } from 'react-icons/tb'
 import EyesAnimation from './eyes/eyes'
 import './Hero.css'
-
+import pdfCsv from "../../public/cv.pdf"
 const codeExample = [
   'function Hello() {',
   '  return <h1>Hello World</h1>',
@@ -104,7 +104,7 @@ function Hero() {
         </div>
 
         <div className="resume-download">
-          <a href="cv.pdf" className="resume-button" download>
+          <a href={pdfCsv} className="resume-button" download>
             Descargar hoja de vida
           </a>
         </div>
