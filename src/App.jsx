@@ -1,13 +1,20 @@
 import { useRef } from 'react'
+import {
+  House,
+  Briefcase,
+  Folder,
+  Lightbulb,
+  Mail,
+} from 'lucide-react'
 import './App.css'
 import Hero from './components/Hero.jsx'
 
 const sections = [
-  { name: 'inicio', icon: '🏠' },
-  { name: 'experiencia', icon: '💼' },
-  { name: 'proyectos', icon: '💻' },
-  { name: 'inspiracion', icon: '💡' },
-  { name: 'contacto', icon: '✉️' },
+  { name: 'inicio', label: 'Inicio', icon: House },
+  { name: 'experiencia', label: 'Experiencia', icon: Briefcase },
+  { name: 'proyectos', label: 'Proyectos', icon: Folder },
+  { name: 'inspiracion', label: 'Inspiracion', icon: Lightbulb },
+  { name: 'contacto', label: 'Contacto', icon: Mail },
 ]
 
 function App() {
@@ -21,10 +28,12 @@ function App() {
     <div className="app">
       <nav className="sidebar">
         <div className="sidebar-menu">
-          {sections.map(({ name, icon }, idx) => (
+          {sections.map(({ name, label, icon: Icon }, idx) => (
             <button key={name} onClick={() => handleClick(idx)}>
-              <span className="icon">{icon}</span>
-              <span className="label">{name}</span>
+              <span className="icon">
+                <Icon />
+              </span>
+              <span className="label">{label}</span>
             </button>
           ))}
         </div>
