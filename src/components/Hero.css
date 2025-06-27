@@ -209,7 +209,7 @@
   justify-content: center;
   position: absolute;
   z-index: 3;
-  bottom: 22rem;
+  bottom: 2rem;
   left: 0;
 }
 
@@ -268,7 +268,7 @@
   .resume-download {
     position: static;
     bottom: auto;
-    margin-top: 20%;
+    margin-top: 1rem;
   }
 
   .hero-left h1 {
