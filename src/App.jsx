@@ -57,7 +57,7 @@ function App() {
       <nav className="sidebar">
         <button className="profile-button">
           <span className="icon">
-            <img src="/profile.jpg" alt="Perfil" className="profile-photo" />
+            <img src="profile.jpg" alt="Perfil" className="profile-photo" />
           </span>
           <span className="label">Perfil</span>
         </button>
