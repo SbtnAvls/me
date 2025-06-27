@@ -2,6 +2,8 @@
   display: flex;
   height: 100vh;
   width: 100%;
+  position: relative;
+  overflow: visible;
 }
 
 .hero-left,
@@ -185,7 +187,9 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
 }
 
 .resume-button {
@@ -216,6 +220,12 @@
   }
 
   .hero-right {
+    margin-top: 2rem;
+  }
+
+  .resume-download {
+    position: static;
+    bottom: auto;
     margin-top: 2rem;
   }
 }
