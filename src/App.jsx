@@ -32,15 +32,18 @@ function App() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          const idx = refs.current.findIndex((el) => el === entry.target)
           if (entry.isIntersecting) {
-            const idx = refs.current.findIndex((el) => el === entry.target)
+            entry.target.classList.add('visible')
             if (idx !== -1) {
               setActive(idx)
             }
+          } else {
+            entry.target.classList.remove('visible')
           }
         })
       },
-      { threshold: 0.6 }
+      { threshold: 0.4 }
     )
 
     refs.current.forEach((section) => {
