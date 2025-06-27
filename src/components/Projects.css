@@ -153,4 +153,12 @@
     order: -1;
     margin-bottom: 1rem;
   }
+
+  .projects-card {
+    width: 100%;
+  }
+
+  .projects-nav {
+    width: 100%;
+  }
 }

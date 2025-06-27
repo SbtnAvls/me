@@ -253,6 +253,16 @@
 
   .hero-right {
     margin-top: 2rem;
+    min-height: 380px;
+  }
+
+  .tools,
+  .code-window {
+    height: 360px;
+  }
+
+  .phone {
+    height: 360px;
   }
 
   .resume-download {
