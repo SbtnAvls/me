@@ -55,13 +55,13 @@ function App() {
   return (
     <div className="app">
       <nav className="sidebar">
+        <button className="profile-button">
+          <span className="icon">
+            <img src="/vite.svg" alt="Perfil" className="profile-photo" />
+          </span>
+          <span className="label">Perfil</span>
+        </button>
         <div className="sidebar-menu">
-          <button className="profile-button">
-            <span className="icon">
-              <img src="/vite.svg" alt="Perfil" className="profile-photo" />
-            </span>
-            <span className="label">Perfil</span>
-          </button>
           {sections.map(({ name, label, icon: Icon }, idx) => (
             <button
               key={name}
