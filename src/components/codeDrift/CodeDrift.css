@@ -1,30 +1,38 @@
 .code-drift-wrapper {
   position: absolute;
-  inset: 0;               /* cubre todo el hero */
+  inset: 0;               /* cubre toda la sección */
   overflow: hidden;
-  z-index: 1;             /* por detrás del contenido interactivo */
   pointer-events: none;   /* no bloquea clics */
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.75rem;
   line-height: 1rem;
-  color: #6b6b6b;         /* gris sutil; súbelo para más contraste */
+  color: #6b6b6b;         /* gris sutil */
   opacity: 0.65;          /* transparencia global */
-  z-index: 1;
+  z-index: 0;             /* detrás del contenido */
 }
 
 /* Cada línea de código que cruza */
 .code-drift-line {
   position: absolute;
   white-space: nowrap;
-  animation-name: drift-right;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  overflow: hidden;
+  border-right: 2px solid #c7c7c7;
+  animation-name: drift-right, typing;
+  animation-timing-function: linear, steps(var(--line-len));
+  animation-duration: var(--drift-duration), 4s;
+  animation-delay: var(--drift-delay), var(--drift-delay);
+  animation-iteration-count: infinite, infinite;
   color: #184;
-  z-index: 1;
+  z-index: 0;
 }
 
 /* Animación: de -100vw → 100vw */
 @keyframes drift-right {
   0%   { transform: translateX(-110vw); z-index: 1; }
   100% { transform: translateX(110vw); z-index: 1; }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: var(--line-len); }
 }

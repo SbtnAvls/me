@@ -30,8 +30,9 @@ export default function CodeDrift({ rows = 14, baseDuration = 20 }) {
           className="code-drift-line"
           style={{
             // Duración y desfase para que no vayan sincronizadas
-            animationDuration: `${baseDuration + (i % 5) * 2}s`,
-            animationDelay: `${-(i * 1.5)}s`,
+            '--line-len': `${snippet.length}ch`,
+            '--drift-duration': `${baseDuration + (i % 5) * 2}s`,
+            '--drift-delay': `${-(i * 1.5)}s`,
             top: `calc(${(i / rows) * 100}% - 0.5rem)`,
           }}
         >
