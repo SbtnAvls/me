@@ -63,7 +63,7 @@ function Experience() {
           <span className="experience-title-text">Experiencia</span>
         </h2>
         <div className="experience-marquee">
-          <Marquee pauseOnHover className="marquee" repeat={2}>
+          <Marquee pauseOnHover className="marquee" repeat={20}>
             {firstRow.map((note) => (
               <figure key={note.title} className={cn('experience-card')}>
                 <figcaption>
@@ -75,7 +75,7 @@ function Experience() {
               </figure>
             ))}
           </Marquee>
-          <Marquee pauseOnHover reverse className="marquee" repeat={2}>
+          <Marquee pauseOnHover reverse className="marquee" repeat={20}>
             {secondRow.map((note) => (
               <figure key={note.title} className={cn('experience-card')}>
                 <figcaption>
