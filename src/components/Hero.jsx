@@ -41,7 +41,7 @@ function Hero() {
   return (
     <div className="hero-banner">
       <div className="hero-left">
-        <EyesAnimation />
+        {/* <EyesAnimation /> */}
         <h1 className="hero-title" ref={titleRef}>
           {title}
         </h1>
