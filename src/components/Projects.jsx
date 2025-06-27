@@ -10,7 +10,7 @@ const projects = [
     description:
       'Aplicación para la venta de productos dirigida a tenderos, disponible tanto en App Store como en Play Store.',
     techs: ['React Native', 'TypeScript', 'Objective-C', "Kotlin"],
-    image: '/vite.svg',
+    image: '/keepShoppers.jpg',
     category: 'Frontend',
   },
   {
@@ -18,7 +18,7 @@ const projects = [
     description:
       'Aplicación con funcionamiento totalmente offline para el equipo de ventas presenciales. Publicada en App Store y Play Store',
     techs: ['React Native', 'TypeScript', 'Objective-C', "Kotlin"],
-    image: '/vite.svg',
+    image: '/sellers.jpg',
     category: 'Frontend',
   },
   {
@@ -26,7 +26,7 @@ const projects = [
     description:
       'Aplicación con funciones offline completas que permite gestionar las entregas y los pagos contra entrega. Disponible en Play Store',
     techs: ['React Native', 'TypeScript', 'Objective-C', "Kotlin"],
-    image: '/vite.svg',
+    image: '/drivers.jpg',
     category: 'Frontend',
   },
   {
