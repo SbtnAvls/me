@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import './Hero.css'
 
 const codeExample = [
@@ -9,26 +9,29 @@ const codeExample = [
 
 function Hero() {
   const title = "Hi! I'm Sebastian, React / React-Native developer"
-  const [visibleText, setVisibleText] = useState('')
+  const titleRef = useRef(null)
 
   useEffect(() => {
-    let i = 0
-    const interval = setInterval(() => {
-      i += 1
-      setVisibleText(title.slice(0, i))
-      if (i >= title.length) {
-        clearInterval(interval)
-      }
-    }, 50)
-    return () => clearInterval(interval)
+    const el = titleRef.current
+    if (!el) return
+
+    const thresholds = Array.from({ length: 101 }, (_, i) => i / 100)
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        el.style.opacity = String(entry.intersectionRatio)
+      },
+      { threshold: thresholds }
+    )
+
+    observer.observe(el)
+    return () => observer.disconnect()
   }, [])
 
   return (
     <div className="hero-banner">
       <div className="hero-left">
-        <h1 className="hero-title">
-          {visibleText}
-          <span className="cursor" aria-hidden="true">|</span>
+        <h1 className="hero-title" ref={titleRef}>
+          {title}
         </h1>
       </div>
       <div className="hero-right">
