@@ -45,7 +45,7 @@ function Hero() {
           </a>
           <a
             className="hero-link"
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit"
             target="_blank"
             rel="noopener noreferrer"
           >
