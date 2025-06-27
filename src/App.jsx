@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import {
   House,
   Briefcase,
@@ -20,17 +20,45 @@ const sections = [
 
 function App() {
   const refs = useRef([])
+  const [active, setActive] = useState(0)
 
   const handleClick = (index) => {
     refs.current[index]?.scrollIntoView({ behavior: 'smooth' })
+    setActive(index)
   }
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const idx = refs.current.findIndex((el) => el === entry.target)
+            if (idx !== -1) {
+              setActive(idx)
+            }
+          }
+        })
+      },
+      { threshold: 0.6 }
+    )
+
+    refs.current.forEach((section) => {
+      if (section) observer.observe(section)
+    })
+
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <div className="app">
       <nav className="sidebar">
         <div className="sidebar-menu">
           {sections.map(({ name, label, icon: Icon }, idx) => (
-            <button key={name} onClick={() => handleClick(idx)}>
+            <button
+              key={name}
+              onClick={() => handleClick(idx)}
+              className={idx === active ? 'active' : ''}
+            >
               <span className="icon">
                 <Icon />
               </span>
