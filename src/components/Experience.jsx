@@ -5,7 +5,7 @@ const notes = [
   {
     title: '✨ Quién soy',
     content: [
-      'Hola, soy Juan Sebastián Solano Avilés, desarrollador full-stack de 23 años. Llevo 3 años y medio convirtiendo ideas en productos reales. Para mí, programar es lo más parecido a tener superpoderes: materializar soluciones que impactan a las personas.',
+      'Mi nombre es Juan Sebastián, desarrollador full-stack de 23 años. Llevo 3 años y medio convirtiendo ideas en productos reales. Para mí, programar es lo más parecido a tener superpoderes: materializar soluciones que impactan a las personas.',
     ],
   },
   {
