@@ -254,6 +254,10 @@
   .hero-right {
     margin-top: 2rem;
     min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
   }
 
   .tools,

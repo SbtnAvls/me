@@ -25,15 +25,6 @@
   z-index: 10;
 }
 
-.sidebar-top {
-  position: absolute;
-  top: 1rem;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .profile-photo {
   width: 1.5rem;
@@ -42,7 +33,7 @@
 }
 
 .sidebar:hover {
-  width: 150px;
+  width: 200px;
   align-items: flex-start;
 }
 
@@ -134,8 +125,8 @@
 }
 
 .sidebar:hover ~ .pages {
-  margin-left: 150px;
-  width: calc(100% - 150px);
+  margin-left: 200px;
+  width: calc(100% - 200px);
 }
 
 .page {
@@ -179,7 +170,6 @@
     align-items: center;
   }
 
-  .sidebar-top,
   .sidebar-bottom {
     position: static;
   }
