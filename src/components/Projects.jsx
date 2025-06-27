@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import CodeDrift from './codeDrift/CodeDrift'
 import './Projects.css'
 
@@ -41,12 +41,17 @@ const projects = [
 
 function Projects() {
   const [filter, setFilter] = useState('Todos')
+  const containerRef = useRef(null)
+
+  useEffect(() => {
+    containerRef.current?.scrollTo({ top: 0 })
+  }, [filter])
 
   const filtered =
     filter === 'Todos' ? projects : projects.filter((p) => p.category === filter)
 
   return (
-    <div className="projects-section">
+    <div className="projects-section" ref={containerRef}>
       <CodeDrift />
       <div className="projects-card">
         

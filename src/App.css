@@ -24,6 +24,22 @@
   z-index: 10;
 }
 
+.sidebar-top {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
 .sidebar:hover {
   width: 150px;
   align-items: flex-start;

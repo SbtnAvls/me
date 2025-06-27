@@ -3,7 +3,6 @@ import {
   House,
   Briefcase,
   Folder,
-  Lightbulb,
   Mail,
 } from 'lucide-react'
 import './App.css'
@@ -15,7 +14,6 @@ const sections = [
   { name: 'inicio', label: 'Inicio', icon: House },
   { name: 'experiencia', label: 'Experiencia', icon: Briefcase },
   { name: 'proyectos', label: 'Proyectos', icon: Folder },
-  { name: 'inspiracion', label: 'Inspiracion', icon: Lightbulb },
   { name: 'contacto', label: 'Contacto', icon: Mail },
 ]
 
@@ -56,6 +54,14 @@ function App() {
   return (
     <div className="app">
       <nav className="sidebar">
+        <div className="sidebar-top">
+          <button className="profile-button">
+            <span className="icon">
+              <img src="/vite.svg" alt="Perfil" className="profile-photo" />
+            </span>
+            <span className="label">Perfil</span>
+          </button>
+        </div>
         <div className="sidebar-menu">
           {sections.map(({ name, label, icon: Icon }, idx) => (
             <button
