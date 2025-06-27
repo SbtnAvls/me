@@ -192,8 +192,7 @@
   .sidebar a .label,
   .sidebar:hover button .label,
   .sidebar:hover a .label {
-    max-width: 100px;
-    opacity: 1;
+    display: none;
   }
 
   .sidebar-bottom {
