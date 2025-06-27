@@ -16,6 +16,8 @@
   line-height: 1.6;
   animation: fadeInUp 0.8s ease forwards;
   opacity: 0;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

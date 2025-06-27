@@ -14,13 +14,14 @@
   bottom: 0;
   left: 0;
   width: 60px;
-  background: #333; 
+  background: #333;
   color: #fff;
   display: flex;
   flex-direction: column;
   padding: 1rem;
   transition: width 0.3s;
   align-items: center;
+  z-index: 10;
 }
 
 .sidebar:hover {
@@ -102,7 +103,8 @@
 
 
 .pages {
-  width: calc(100%);
+  margin-left: 60px;
+  width: calc(100% - 60px);
   height: 100vh;
   overflow-y: auto;
   transition: margin-left 0.3s, width 0.3s;
@@ -115,17 +117,20 @@
 }
 
 .sidebar:hover ~ .pages {
-  width: calc(100% - 14%);
+  margin-left: 150px;
+  width: calc(100% - 150px);
 }
 
 .page {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid #222;
   background-color: #735;
+  padding: 0 1rem;
 }
 
 .page > * {
