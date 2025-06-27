@@ -4,7 +4,9 @@ function Experience() {
   return (
     <div className="experience-section">
       <div className="experience-wrapper">
-        <h2 className="experience-title">Experiencia</h2>
+        <h2 className="experience-title">
+          <span className="experience-title-text">Experiencia</span>
+        </h2>
         <p>Hola, soy Juan Sebastián Solano Avilés, un desarrollador full-stack de 23 años que lleva más de tres años y medio creando soluciones de punta a punta. Para mí, programar es lo más parecido a tener superpoderes: una forma de convertir ideas en productos que impactan a las personas.</p>
         <p>En mi día a día combino React y React Native (con Redux Toolkit, React Reanimated y módulos nativos) para construir interfaces fluidas y accesibles en web, iOS y Android. He publicado cuatro aplicaciones móviles en ambas plataformas, gestionando todo el ciclo: diseño, desarrollo, pruebas, despliegue y métricas post-lanzamiento.</p>
         <p>En el backend me muevo con Node.js + TypeScript y Python, orquestando microservicios en GCP y Firebase, integrando bases de datos SQL y NoSQL, y automatizando despliegues con contenedores y pipelines CI/CD. También disfruto meter mano en Kotlin, Objective-C y herramientas como Xcode y Android Studio para desarrollar o integrar funcionalidades nativas cuando el rendimiento lo exige.</p>
