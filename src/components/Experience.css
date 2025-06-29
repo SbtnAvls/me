@@ -26,6 +26,13 @@
   .experience-wrapper {
     max-width: 100%;
   }
+  .experience-section {
+    padding: 2rem 0;
+  }
+  .experience-marquee {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
 }
 
 .experience-marquee {
