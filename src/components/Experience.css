@@ -22,130 +22,26 @@
   align-items: center;
 }
 
+.experience-scroll {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.experience-scroll::-webkit-scrollbar {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .experience-wrapper {
     max-width: 100%;
   }
   .experience-section {
     padding: 2rem 0;
-  }
-  .experience-marquee {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-  }
-}
-
-.experience-marquee {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.experience-marquee::before,
-.experience-marquee::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 15%;
-  pointer-events: none;
-}
-
-.experience-marquee::before {
-  left: 0;
-  background: linear-gradient(to right, #242424, transparent);
-}
-
-.experience-marquee::after {
-  right: 0;
-  background: linear-gradient(to left, #242424, transparent);
-}
-
-
-
-
-
-
-.experience-marquee-2::before,
-.experience-marquee-2::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 15%;
-  pointer-events: none;
-}
-
-.experience-marquee-2::before {
-  right: 0;
-  background: linear-gradient(to left, #242424, transparent);
-}
-
-.experience-marquee-2::after {
-  left: 0;
-  background: linear-gradient(to right, #242424, transparent);
-}
-
-.marquee {
-  --duration: 20s;
-  --gap: 1rem;
-  display: flex;
-  overflow: hidden;
-  padding: 1rem;
-  gap: var(--gap);
-  overflow: scroll;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.marquee::-webkit-scrollbar {
-  display: none;
-}
-
-.marquee.vertical {
-  flex-direction: column;
-}
-
-.marquee.paused:hover .marquee-row {
-  animation-play-state: paused;
-}
-
-.marquee-row {
-  display: flex;
-  flex-shrink: 0;
-  justify-content: space-around;
-  gap: var(--gap);
-  animation: marquee var(--duration) linear infinite;
-}
-
-.marquee-row.reverse {
-  animation-direction: reverse;
-}
-
-.marquee-row.vertical {
-  flex-direction: column;
-  animation-name: marquee-vertical;
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-100%);
   }
 }
 
@@ -159,6 +55,8 @@
   background: rgba(255, 255, 255, 0.05);
   padding: 1rem;
   box-sizing: border-box;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
 }
 
 .experience-card h3 {

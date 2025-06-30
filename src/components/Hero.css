@@ -238,6 +238,7 @@
     min-height: 100vh;
     overflow: visible;
     align-items: center;
+    padding-left: 0;
   }
 
   .hero-left,
