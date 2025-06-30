@@ -1,3 +1,4 @@
+import { Marquee } from '../registry/magicui/marquee'
 import { cn } from '../lib/utils'
 import './Experience.css'
 
@@ -52,23 +53,42 @@ const notes = [
 ]
 
 function Experience() {
+  const firstRow = notes.slice(0, Math.ceil(notes.length / 2))
+  const secondRow = notes.slice(Math.ceil(notes.length / 2))
+
   return (
     <div className="experience-section">
       <div className="experience-wrapper">
         <h2 className="experience-title">
           <span className="experience-title-text">Experiencia</span>
         </h2>
-        <div className="experience-scroll">
-          {notes.map((note) => (
-            <figure key={note.title} className={cn('experience-card')}>
-              <figcaption>
-                <h3>{note.title}</h3>
-              </figcaption>
-              {note.content.map((line, i) => (
-                <p key={i}>{line}</p>
+        <div className="experience-marquee">
+          <div className='experience-marquee-2'>
+            <Marquee pauseOnHover className="marquee" repeat={20}>
+              {firstRow.map((note) => (
+                <figure key={note.title} className={cn('experience-card')}>
+                  <figcaption>
+                    <h3>{note.title}</h3>
+                  </figcaption>
+                  {note.content.map((line, i) => (
+                    <p key={i}>{line}</p>
+                  ))}
+                </figure>
               ))}
-            </figure>
-          ))}
+            </Marquee>
+            <Marquee pauseOnHover reverse className="marquee" repeat={20}>
+              {secondRow.map((note) => (
+                <figure key={note.title} className={cn('experience-card')}>
+                  <figcaption>
+                    <h3>{note.title}</h3>
+                  </figcaption>
+                  {note.content.map((line, i) => (
+                    <p key={i}>{line}</p>
+                  ))}
+                </figure>
+              ))}
+            </Marquee>
+          </div>
         </div>
       </div>
     </div>
