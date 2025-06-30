@@ -51,7 +51,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 25%;
+  width: 15%;
   pointer-events: none;
 }
 
@@ -65,6 +65,31 @@
   background: linear-gradient(to left, #242424, transparent);
 }
 
+
+
+
+
+
+.experience-marquee-2::before,
+.experience-marquee-2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 15%;
+  pointer-events: none;
+}
+
+.experience-marquee-2::before {
+  right: 0;
+  background: linear-gradient(to left, #242424, transparent);
+}
+
+.experience-marquee-2::after {
+  left: 0;
+  background: linear-gradient(to right, #242424, transparent);
+}
+
 .marquee {
   --duration: 20s;
   --gap: 1rem;
@@ -72,6 +97,13 @@
   overflow: hidden;
   padding: 1rem;
   gap: var(--gap);
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.marquee::-webkit-scrollbar {
+  display: none;
 }
 
 .marquee.vertical {
@@ -119,7 +151,7 @@
 
 .experience-card {
   position: relative;
-  width: 100%;
+  max-width: 18rem;
   cursor: pointer;
   overflow: hidden;
   border-radius: 12px;

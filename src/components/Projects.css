@@ -41,6 +41,9 @@
   top: 0;
   background: #222;
   padding: 1rem 0;
+  width: 65%;
+  align-self: center;
+  margin-bottom: 3rem;
 }
 
 .projects-nav {
@@ -78,7 +81,8 @@
   display: flex;
   flex-direction: column;
   gap: calc(1rem + 2%);
-  flex: 1;
+  max-width: 65%;
+  align-self: center;
   overflow-y: auto;
 }
 

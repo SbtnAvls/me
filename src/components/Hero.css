@@ -4,6 +4,7 @@
   width: 100%;
   position: relative;
   overflow: visible;
+  padding-left: 10rem;
 }
 
 .repo-icon {
