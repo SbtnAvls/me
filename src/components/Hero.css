@@ -209,7 +209,7 @@
   display: flex;
   justify-content: center;
   position: absolute;
-  z-index: 3;
+  z-index: 10;      /* keep above following sections */
   bottom: 2rem;
   left: 0;
 }
@@ -245,7 +245,7 @@
   .hero-right,
   .resume-download {
     position: relative;
-    z-index: 2;            /* cualquier valor >0 sirve */
+    z-index: 10;           /* keep interactive elements on top */
   }
 
   .hero-left,
